@@ -1,3 +1,5 @@
+# Modifies the text on the page. Adds a trademark for all 6-letter words
+
 import string
 import re
 

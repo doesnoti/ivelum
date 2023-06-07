@@ -8,11 +8,11 @@ def change_links(page, URL):
         if logo_link and logo_link['href'] + '/' == URL:
             logo_link['href'] = '/'
 
-    # replace the styles path
+    # replace the styles and favicon paths
     link_tags = page.find_all('link')
 
     for single in link_tags:
-        if single['rel'][0] == 'stylesheet':
+        if single['rel'][0] == 'stylesheet' or single['rel'][0] == 'shortcut':
             single['href'] = URL + single['href']
 
     # replace the script path
